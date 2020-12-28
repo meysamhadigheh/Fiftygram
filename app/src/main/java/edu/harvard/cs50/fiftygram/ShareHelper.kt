@@ -1,5 +1,6 @@
 package edu.harvard.cs50.fiftygram
 
+import android.R
 import android.app.Activity
 import android.content.*
 import android.graphics.Bitmap
@@ -10,12 +11,11 @@ import android.os.StrictMode
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
-import java.io.OutputStream
-import java.lang.reflect.Method
-
+import com.google.android.material.snackbar.Snackbar
 import java.io.File
 import java.io.FileOutputStream
-
+import java.io.OutputStream
+import java.lang.reflect.Method
 
 
 object ShareHelper {
@@ -57,7 +57,9 @@ object ShareHelper {
             e.printStackTrace()
         }
 
-
+        val snackBar: Snackbar = Snackbar.make((context as Activity).findViewById(R.id.content),
+                "Your Image Saved To Gallery", Snackbar.LENGTH_LONG)
+        snackBar.show()
 
         return uri
     }
