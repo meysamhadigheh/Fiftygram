@@ -6,9 +6,10 @@
       android:orientation="vertical"
       android:gravity="center">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/image_view" />
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/image_view"
+        android:scaleType="centerCrop"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,5 +31,10 @@
         android:layout_height="wrap_content"
         android:text="Sketch"
         android:onClick="applySketch" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:onClick="applySave" />
   </LinearLayout>
 </ScrollView>
