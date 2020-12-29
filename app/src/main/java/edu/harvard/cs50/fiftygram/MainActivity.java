@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import jp.wasabeef.glide.transformations.gpu.InvertFilterTransformation;
 import jp.wasabeef.glide.transformations.gpu.SepiaFilterTransformation;
 import jp.wasabeef.glide.transformations.gpu.SketchFilterTransformation;
 import jp.wasabeef.glide.transformations.gpu.ToonFilterTransformation;
@@ -99,6 +100,9 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
     public void applySketch(View view) {
         apply(new SketchFilterTransformation());
+    }
+    public void applyInvert(View view){
+        apply(new InvertFilterTransformation());
     }
 
     public void choosePhoto(View view) {
