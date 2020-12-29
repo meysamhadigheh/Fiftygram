@@ -74,8 +74,9 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
         Bitmap bitmap=((BitmapDrawable)imageView.getDrawable()).getBitmap();
 
-        ShareHelper.INSTANCE.saveBitmap(bitmap,System.currentTimeMillis()+".png",this);
+        Uri uri = ShareHelper.INSTANCE.saveBitmap(bitmap,System.currentTimeMillis()+".png",this);
 
+        ShareHelper.INSTANCE.shareImage(uri,this,"share this image");
     }
 
 
